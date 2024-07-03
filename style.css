@@ -1,0 +1,114 @@
+:root {
+
+    --etch-color: #db2222;
+    --text-color: #c19f32;
+    --outter-knob: #f3eaeaef;
+    --inner-knob1: #e2dadaef;
+    --inner-knob2: #c3c0c0ef;
+    --knob-border: #aaa7a7;
+}
+
+h1,
+footer {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.outline {
+    border-color: var(--etch-color);
+    border-width: 10px;
+    padding: 10px 20px 30px;
+    border-radius: 10%;
+    border-style: solid;
+
+}
+
+
+#logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-style: italic var(--text-color);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+
+
+}
+
+.etch {
+    background-color: var(--etch-color);
+}
+
+@media only screen and (min-width:769px) {
+    #drawing-area {
+        height: 600px;
+        width: 800px;
+    }
+}
+
+@media only screen and (min-width:481px) {
+    #drawing-area {
+        height: 400px;
+        width: 600px;
+    }
+}
+
+@media only screen and (min-width:320px) {
+    #drawing-area {
+        height: 200px;
+        width: 400px;
+    }
+}
+
+
+
+#knobs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.knob-outter,
+.knob-inner1,
+.knob-inner2 {
+    border-color: var(--knob-border);
+    border-width: 1px;
+
+    border-radius: 50%;
+    border-style: solid;
+
+}
+
+.knob-outter {
+    background-color: var(--outter-knob);
+
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.knob-inner1 {
+    background-color: var(--inner-knob1);
+    position: relative;
+    width: 75%;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+}
+
+.knob-inner2 {
+    background-color: var(--inner-knob2);
+    position: relative;
+    width: 45%;
+    height: 45%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+}
