@@ -13,12 +13,12 @@
         <h1> Turn the knobs and draw your picture!</h1>
     </header>
     <!-- Section of the etch a sketch border -->
-    <section id="etch">
+    <section id="etch-device">
         <div class="outline">
             <h2 id="logo"> Etch a sketch</h2>
             <div class="outline">
 
-                <canvas id="drawing-area">
+                <canvas id="drawing-area" width="1600" height="1000">
 
                 </canvas>
 
@@ -45,9 +45,14 @@
 
     </section>
 
-
+    <!-- Section for Download button-->
+    <section>
+        <a href="#" id="sketchImage" download="my-sketch.png">Download Sketch</a>
+    </section>
     <footer> Made with </footer>
-    <script src="./knob.js"></script>
+    <script src="./canvasDraw.js"></script>
+    <script src="./knobsTurning.js"></script>
+    <script> src = "./saveImage.js"</script>
 
 </body>
 
