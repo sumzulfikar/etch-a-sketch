@@ -12,7 +12,7 @@ context.lineWidth = 10;
 
 
 
-//set heigh and width for movement
+//set height and width for movement
 
 const { height, width } = canvas;
 // A coordinates object to store current drawing coordinates for x-axis and y-axis

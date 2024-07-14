@@ -1,10 +1,12 @@
 :root {
 
-    --etch-color: #db2222;
+    --etch-color: #ad1517;
+    --etch-color2: #d33f3f;
     --text-color: #c19f32;
     --outter-knob: #d5d6d7;
     --inner-knob1: ##d5d6d7;
     --inner-knob2: #c3c0c0ef;
+    --canvas-color: #d4d2ce;
     --knob-border: #aaa7a7;
 }
 
@@ -13,6 +15,7 @@ body {
 }
 
 h1,
+h2,
 footer {
     text-align: center;
     padding-top: 10px;
@@ -20,10 +23,10 @@ footer {
 
 .outline {
     border-color: var(--etch-color);
+    background: linear-gradient(var(--etch-color), var(--etch-color2));
     border-width: 10px;
     padding: 10px 20px 30px;
     border-radius: 10%;
-    border-style: solid;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -31,10 +34,16 @@ footer {
 
 }
 
+h3 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
 
-#logo {
+.logo {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: larger;
+    text-align: center;
     font-style: italic var(--text-color);
     font-weight: 500;
     display: flex;
@@ -44,18 +53,22 @@ footer {
 
 }
 
-.etch-device {
-    background-color: var(--etch-color);
+#icon {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 3px;
 
 }
 
 #drawing-area {
     width: 1600;
     height: 1000;
-    background-color: white;
+    background-color: var(--canvas-color);
     padding-top: 2px;
     overflow: hidden;
     border-radius: 10%;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.10);
 }
 
 @media only screen and (min-width:769px) {
@@ -130,7 +143,6 @@ canvas {
 .knob-inner2 {
     border-color: var(--knob-border);
     border-width: 1px;
-
     border-radius: 50%;
     border-style: solid;
 
