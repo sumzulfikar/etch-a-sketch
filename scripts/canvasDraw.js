@@ -112,7 +112,7 @@ const updateCanvasDraw = () => {
 Draggable.create("#horizontal-knob", {
     type: "rotation",
     inertia: true,
-    dragResistance: 0.4,
+    dragResistance: 0.6,
     onDrag: updateCanvasDraw,
 });
 
@@ -120,7 +120,7 @@ Draggable.create("#horizontal-knob", {
 Draggable.create("#vertical-knob", {
     type: "rotation",
     inertia: true,
-    dragResistance: 0.4,
+    dragResistance: 0.6,
     onDrag: updateCanvasDraw,
 });
 

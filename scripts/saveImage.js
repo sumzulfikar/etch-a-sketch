@@ -1,7 +1,9 @@
 
-const savedSketch = canvas.toDataURL("image/jpeg", 1.0);
+const download = () => {
+    const image = document.getElementById("sketchImage");
+    const savedSketch = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
 
-const link = document.getElementById("sketchImage");
+    download.setAttribute("href", image)
+}
 
-link.href = savedSketch;
-link.download = "sketch.jpeg";
+

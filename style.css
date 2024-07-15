@@ -12,6 +12,7 @@
 
 body {
     height: 100dvh;
+    margin: 0;
 }
 
 h1,
@@ -40,6 +41,10 @@ h3 {
     text-align: center;
 }
 
+p {
+    text-wrap: wrap;
+}
+
 .logo {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: larger;
@@ -58,7 +63,25 @@ h3 {
     flex-direction: row;
     align-items: stretch;
     padding: 3px;
+    padding-top: 2px;
 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
 }
 
 #drawing-area {
@@ -86,6 +109,21 @@ h3 {
         width: 140px;
         height: 140px;
     }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column1 {
+        flex: 80%;
+    }
+
+    .column2 {
+        flex: 20%;
+    }
+
+
+
 }
 
 
@@ -104,12 +142,25 @@ h3 {
         width: 100px;
         height: 100px;
     }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column1 {
+        flex: 80%;
+    }
+
+    .column2 {
+        flex: 20%;
+    }
+
 }
 
 @media only screen and (min-width:320px) {
     .outiline {
-        height: 100px;
-        width: 200px;
+        height: 70px;
+        width: 150px;
     }
 
     #knobs {
@@ -118,10 +169,22 @@ h3 {
     }
 
     .knob-outter {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .column1,
+    .column2 {
+        flex: 100%;
     }
 }
+
+@media only screen and (orientation:landscape) {}
+
 
 canvas {
     height: 400px;
