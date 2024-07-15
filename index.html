@@ -12,56 +12,75 @@
     <header>
         <h1> Turn the knobs and draw your picture!</h1>
     </header>
-    <!-- Section of the etch a sketch border -->
-    <section id="etch-device">
-        <div class="outline">
-            <h2 id="logo"> Etch a sketch</h2>
+    <main class="container">
+        <!-- Section of the etch a sketch border -->
+        <section id="etch-device" class="column1">
             <div class="outline">
+                <h2 id="logo"> Etch a sketch</h2>
+                <div class="outline">
 
-                <canvas id="drawing-area" width="1600" height="1000">
+                    <canvas id="drawing-area" width="1600" height="1000">
 
-                </canvas>
+                    </canvas>
 
-            </div>
-            <div id="knobs">
-                <div id="icon">
-                    <i class="fa-solid fa-left-right fa-lg " style="color: #db2e2c;"></i>
-                    <div class="knob-outter" id="horizontal-knob">
-                        <div class="knob-inner1">
-                            <div class="knob-inner2">
+                </div>
+                <div id="knobs">
+                    <div id="icon">
+                        <i class="fa-solid fa-left-right fa-lg " style="color: #db2e2c;"></i>
+                        <div class="knob-outter" id="horizontal-knob">
+                            <div class="knob-inner1">
+                                <div class="knob-inner2">
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="icon">
+                        <i class="fa-solid fa-up-down fa-lg" style="color: #db2e2c;"></i>
+                        <div class="knob-outter" id="vertical-knob">
+                            <div class="knob-inner1">
+                                <div class="knob-inner2">
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="icon">
-                    <i class="fa-solid fa-up-down fa-lg" style="color: #db2e2c;"></i>
-                    <div class="knob-outter" id="vertical-knob">
-                        <div class="knob-inner1">
-                            <div class="knob-inner2">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
 
 
 
-    </section>
+        </section>
 
-    <!-- Section for Download button-->
-    <section>
-        <a href="#" id="sketchImage" download="sketch.jpeg">Download Sketch</a>
-    </section>
-    <footer> Made by Sumaiya Zulfikar </footer>
+        <aside class="column2">
+            <!-- section with instructions -->
+            <section id="instructions">
+                <h3>Instructions:</h3>
+                <h4><Span>Desktop:</Span></h4>
+                <p>For Desktop you can use arrows in your keyboard to sketch.</p>
+                <h4><span>Touch screen and mobile:</span></h4>
+                <p>If you have touch screen device or using a mobile device, you can use those knobs to sketch. </p>
+                <ul>
+                    <li>Turn the left
+                        knob
+                        to sketch horizontally. </li>
+                    <li> Turn the right knob to draw vertically.</li>
+                </ul>
+            </section>
+            <!-- Section for Download button-->
+            <section>
+                <a id="sketchImage" download="sketch.png">
+                    <button type="button" onClick="download()">Download Sketch</button></a>
+            </section>
+        </aside>
+    </main>
+    <footer> Crafted with 🎨 by Sumaiya Zulfikar </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
     <script src="./scripts/canvasDraw.js"></script>
     <script src="./scripts/saveImage.js"></script>
-    <<script src="https://kit.fontawesome.com/3767531c4f.js" crossorigin="anonymous">
-        </script>
+    <script src="https://kit.fontawesome.com/3767531c4f.js" crossorigin="anonymous">
+    </script>
 
 
 
