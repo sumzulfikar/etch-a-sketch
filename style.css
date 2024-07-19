@@ -48,6 +48,13 @@ p {
 }
 
 /* Shake and Sketch device style */
+#etch-device {
+    max-width: 80vw;
+    max-height: 60vh;
+    align-items: center;
+
+}
+
 .outline {
     border-color: var(--etch-color);
     background: linear-gradient(var(--etch-color), var(--etch-color2));
@@ -69,6 +76,8 @@ p {
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.10);
 }
 
+
+
 canvas {
     position: relative;
 
@@ -80,6 +89,8 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
 
 }
 
@@ -138,14 +149,10 @@ canvas {
 only screen and (min-width:992px),
 only screen and (min-width:768px) {
 
-    #knobs {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
 
     .knob-outter {
-        width: 160px;
-        height: 160px;
+        width: 100px;
+        height: 100px;
     }
 
     .knob-inner2 {
@@ -157,19 +164,11 @@ only screen and (min-width:768px) {
 
 @media only screen and (min-width:576px),
 only screen and (min-width:428px) {
-    .outiline {
-        height: 400px;
-        width: 600px;
-    }
 
-    #knobs {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
 
     .knob-outter {
-        width: 140px;
-        height: 140px;
+        width: 90px;
+        height: 90px;
     }
 
     .knob-inner2 {
