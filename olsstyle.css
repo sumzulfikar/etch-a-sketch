@@ -1,0 +1,180 @@
+#icon {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 3px;
+    padding-top: 2px;
+
+}
+
+.nav-buttons {
+    display: none;
+}
+
+
+
+#nav-buttons {
+
+    flex: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+
+#instructions {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    background-color: lightgray;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+
+@media only screen and (min-width:992px) {
+    .outiline {
+        height: 400px;
+        width: 600px;
+    }
+
+    #knobs {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /* 
+    .knob-outter {
+        width: 140px;
+        height: 140px;
+    }
+
+    .knob-inner2 {
+        top: 76px;
+        left: 19px;
+    }
+
+    .container {
+        flex-direction: row;
+    } */
+
+
+
+}
+
+
+@media only screen and (min-width:769px) {
+    .outiline {
+        height: 400px;
+        width: 600px;
+    }
+
+    #knobs {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .knob-outter {
+        width: 140px;
+        height: 140px;
+    }
+
+    .knob-inner2 {
+        top: 76px;
+        left: 19px;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+
+
+}
+
+
+@media only screen and (min-width:428px) {
+    .outiline {
+        height: 200px;
+        width: 400px;
+    }
+
+    #knobs {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .knob-outter {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .knob-inner2 {
+        top: 76px;
+        left: 19px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+}
+
+
+@media only screen and (min-width:310px) {
+    .outiline {
+        height: 10px;
+        width: 300px;
+    }
+
+    #knobs {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .knob-outter {
+        width: 100px;
+        height: 100px;
+    }
+
+    .knob-inner2 {
+        top: 76px;
+        left: 19px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (min-width:280px) {
+    .outiline {
+        height: 70px;
+        width: 100px;
+    }
+
+
+    #knobs {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .knob-outter {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .container {
+        flex-direction: column;
+    }
+
+
+}
