@@ -2,12 +2,6 @@ gsap.registerPlugin(Draggable);
 
 const canvas = document.getElementById("drawing-area");
 const context = canvas.getContext("2d");
-const verticalKnobElement = document.getElementById("horizontal-knob");
-const horizontalKnobElement = document.getElementById("vertical-knob");
-
-context.lineJoin = 'miter';
-context.lineCap = 'round';
-context.lineWidth = 10;
 
 
 
@@ -112,7 +106,7 @@ const updateCanvasDraw = () => {
 Draggable.create("#horizontal-knob", {
     type: "rotation",
     inertia: true,
-    dragResistance: 0.6,
+    dragResistance: 0.9,
     onDrag: updateCanvasDraw,
 });
 
@@ -120,7 +114,7 @@ Draggable.create("#horizontal-knob", {
 Draggable.create("#vertical-knob", {
     type: "rotation",
     inertia: true,
-    dragResistance: 0.6,
+    dragResistance: 0.9,
     onDrag: updateCanvasDraw,
 });
 
