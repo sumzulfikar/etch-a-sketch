@@ -3,36 +3,7 @@ gsap.registerPlugin(Draggable);
 const canvas = document.getElementById("drawing-area");
 const context = canvas.getContext("2d");
 
-const resizeCanvas = () => {
-    if (window.innerWidth < window.innerHeight) {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight - 120;
 
-    }
-    else {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    context.strokeStyle = "#b8b6b6";
-    context.lineJoin = 'miter';
-    context.lineCap = 'round';
-    context.lineWidth = 2;
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.beginPath();
-}
-
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
-
-
-const verticalKnobElement = document.getElementById("horizontal-knob");
-const horizontalKnobElement = document.getElementById("vertical-knob");
-context.strokeStyle = "#b8b6b6"
-context.lineJoin = 'miter';
-context.lineCap = 'round';
-context.lineWidth = 10;
-canvas.width = "1600";
-canvas.height = "1000";
 
 
 //set height and width for movement
