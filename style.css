@@ -10,14 +10,17 @@
     --knob-border: #aaa7a7;
     --nav-button-color1: #FFFDD7;
     --nav-button-color2: #bd3f36;
-    /* --nav-text-color: #0d121c; */
     touch-action: pinch-zoom;
 }
 
 body {
-    height: 100vh;
+
     margin: 0;
-    padding: 2px;
+    padding: 5%;
+
+    height: 100vh;
+
+
 }
 
 /* Text styles */
@@ -54,11 +57,15 @@ footer {
 
 }
 
+canvas {
+    width: 100%;
+}
+
 /* Shake and Sketch device style */
 #etch-device {
-    max-width: 80vw;
-    max-height: 60vh;
-    display: inline;
+    width: 80%;
+    height: auto;
+    /* display: inline; */
     align-items: center;
 
 }
@@ -95,7 +102,7 @@ canvas {
 
 #knobs {
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
     padding-left: 40px;
     padding-right: 40px;
@@ -187,8 +194,8 @@ only screen and (min-width:428px) {
 
 @media only screen and (min-width:80px) {
     #knobs {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 9px;
+        padding-right: 7px;
     }
 
     .knob-outter {
@@ -203,11 +210,22 @@ only screen and (min-width:428px) {
 
 }
 
-@media only screen and (orientation:landscape) {
-    #etch-device {
-        height: 90vh;
-        width: 90vw;
+@media only screen and (orientation:landscape) and (max-width:768px) {
+    h1 {
+        display: none;
     }
+
+    body {
+        padding: 0;
+        height: 100%
+    }
+
+    #etch-device {
+        width: 100%;
+
+    }
+
+
 }
 
 /* Arrows styling for knobs */

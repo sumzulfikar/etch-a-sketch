@@ -13,77 +13,50 @@
     <header>
         <h1> Get Your Sketch On!</h1>
     </header>
-    <main class="container">
-        <!-- Section of the etch a sketch border -->
 
-        <section id="etch-device" class="column1">
+    <!-- Section of the etch a sketch border -->
+
+    <section id="etch-device" class="column1">
+        <div class="outline">
+            <h2 id="logo">Sketch and Shake: <span> Get Your Sketch On!</span></h2>
+
             <div class="outline">
-                <h2 id="logo">Sketch and Shake</h2>
 
-                <div class="outline">
+                <canvas id="drawing-area">
 
-                    <canvas id="drawing-area" width="1600" height="1000">
+                </canvas>
 
-                    </canvas>
+            </div>
+            <div id="knobs">
+                <div id="icon">
+                    <i class="fa-solid fa-left-right fa-lg " style="color: #d4af37;"></i>
+                    <div class="knob-outter" id="horizontal-knob">
+                        <div class="knob-inner1">
+                            <div class="knob-inner2">
 
-                </div>
-                <div id="knobs">
-                    <div id="icon">
-                        <i class="fa-solid fa-left-right fa-lg " style="color: #d4af37;"></i>
-                        <div class="knob-outter" id="horizontal-knob">
-                            <div class="knob-inner1">
-                                <div class="knob-inner2">
-
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="icon">
-                        <i class="fa-solid fa-up-down fa-lg" style="color: #d4af37;"></i>
-                        <div class="knob-outter" id="vertical-knob">
-                            <div class="knob-inner1">
-                                <div class="knob-inner2">
+                </div>
+                <div id="icon">
+                    <i class="fa-solid fa-up-down fa-lg" style="color: #d4af37;"></i>
+                    <div class="knob-outter" id="vertical-knob">
+                        <div class="knob-inner1">
+                            <div class="knob-inner2">
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
 
-        </section>
+    </section>
 
 
-        <!-- section with instructions -->
-        <section id="instructions" class="column2" style="display: none;">
-            <h3></h3>
-            <p>Ready to unleash your inner artist? This digital canvas is ready for your masterpiece (or
-                masterpiece-in-progress). Here's how to make your magic happen:</p>
-            <h4><Span>Desktop Darlings:</Span></h4>
-            <p>Feeling classic? Use those trusty arrow keys to navigate your way to sketch glory! Up and down for
-                horizontal lines, left and right for vertical. Easy as pie (or maybe a tasty doodle?)</p>
-            <h4><span>Mouseketeers:</span></h4>
-            <p>Love a good point-and-click? Grab those knobs on the side and drag them around to create your lines!
-                Left
-                knob controls vertical movement, right knob for horizontal. </p>
-            <h4><span>Touchscreen Titans::</span></h4>
-            <p>Got a fancy touch screen device? No problem! Swipe up and down on the left knob for vertical lines,
-                and
-                left and right on the right knob for horizontal lines. Simple as that! </p>
 
-
-            <!-- Download button-->
-            <a id="sketchImage" download="sketch.png">
-                <button type="button" onclick="download()">Download Sketch</button></a>
-            <!-- Adding a shake button for now -->
-            <button type="button" onclick="shake()">
-                Shake and Erase
-            </button>
-        </section>
-
-    </main>
     <footer> Developed by- Sumaiya Zulfikar </footer>
     <!-- Scripts for GASP animation -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
