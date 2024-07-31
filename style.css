@@ -10,17 +10,17 @@
     --knob-border: #aaa7a7;
     --nav-button-color1: #FFFDD7;
     --nav-button-color2: #bd3f36;
-
+    font-family: "Rubik", sans-serif;
     touch-action: pinch-zoom;
 }
 
 
-/* 
+
 body {
     height: 100vh;
     margin: 0;
     padding: 2px;
-} */
+}
 
 /* Text styles */
 h1,
@@ -45,7 +45,7 @@ footer {
 }
 
 #logo {
-    font-family: fantasy;
+
     font-size: large;
     text-align: center;
     color: var(--text-color);
@@ -163,13 +163,19 @@ canvas {
 }
 
 /* Media query for knobs */
-@media only screen and (min-width:1700px),
+@media (min-width:1700px),
 (min-width:992px),
 (min-width:768px) {
     /* .outiline {
         height: 60vh;
         width: 600px;
     } */
+
+    .canvas {
+        width: "1600";
+        height: "1000";
+
+    }
 
     .container {
         padding: 10px;
@@ -189,7 +195,7 @@ canvas {
 
 }
 
-@media only screen and (min-width:576px),
+@media (min-width:576px),
 (min-width:428px) {
 
 
@@ -205,7 +211,7 @@ canvas {
 
 }
 
-@media only screen and (min-width:80px) {
+@media (min-width:80px) {
     #knobs {
         padding-left: 40px;
         padding-right: 40px;
@@ -223,10 +229,24 @@ canvas {
 
 }
 
-@media only screen and (orientation:landscape) {
+@media(orientation:landscape) {
     #etch-device {
         height: 90vh;
-        width: 90vw;
+        width: 53vw;
+    }
+
+    .canvas {
+        width: "1600";
+        height: "1000";
+
+    }
+
+    h1 {
+        display: none;
+    }
+
+    footer {
+        display: none;
     }
 }
 
