@@ -122,9 +122,6 @@ Draggable.create("#vertical-knob", {
 
 
 
-
-
-
 window.addEventListener("keydown", draw);
 
 
