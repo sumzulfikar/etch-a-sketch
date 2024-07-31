@@ -10,15 +10,17 @@
     --knob-border: #aaa7a7;
     --nav-button-color1: #FFFDD7;
     --nav-button-color2: #bd3f36;
-    /* --nav-text-color: #0d121c; */
+
     touch-action: pinch-zoom;
 }
 
+
+/* 
 body {
     height: 100vh;
     margin: 0;
     padding: 2px;
-}
+} */
 
 /* Text styles */
 h1,
@@ -55,13 +57,13 @@ footer {
 }
 
 /* Shake and Sketch device style */
-#etch-device {
+/* #etch-device {
     max-width: 80vw;
     max-height: 60vh;
     display: inline;
     align-items: center;
 
-}
+} */
 
 .outline {
     border-color: var(--etch-color);
@@ -73,6 +75,15 @@ footer {
     position: relative;
     flex-direction: column;
 
+}
+
+#store {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #drawing-area {
@@ -153,13 +164,22 @@ canvas {
 
 /* Media query for knobs */
 @media only screen and (min-width:1700px),
-only screen and (min-width:992px),
-only screen and (min-width:768px) {
+(min-width:992px),
+(min-width:768px) {
+    /* .outiline {
+        height: 60vh;
+        width: 600px;
+    } */
 
+    .container {
+        padding: 10px;
+        width: 80%;
+        height: 20%;
+    }
 
     .knob-outter {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
     }
 
     .knob-inner2 {
@@ -170,12 +190,12 @@ only screen and (min-width:768px) {
 }
 
 @media only screen and (min-width:576px),
-only screen and (min-width:428px) {
+(min-width:428px) {
 
 
     .knob-outter {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
     }
 
     .knob-inner2 {
