@@ -2,7 +2,8 @@ gsap.registerPlugin(Draggable);
 
 const canvas = document.getElementById("drawing-area");
 const context = canvas.getContext("2d");
-
+const verticalKnobElement = document.getElementById("vertical-knob");
+const horizontalKnobElement = document.getElementById("horizontal-knob");
 
 
 
@@ -54,9 +55,10 @@ function draw(event) {
             axisY -= movement;
             verticalKnobElement.style.transform = `rotate(${coordinates.y * Math.PI / 180}rad)`;
         }
-        else if (event.key === "ArrowDown")
+        else if (event.key === "ArrowDown") {
             axisY += movement;
-        verticalKnobElement.style.transform = `rotate(${coordinates.y * Math.PI / 180}rad)`;
+            verticalKnobElement.style.transform = `rotate(${coordinates.y * Math.PI / 180}rad)`;
+        }
 
     }
     drawLine(axisX, axisY);
@@ -82,17 +84,17 @@ const updateCanvasDraw = () => {
     let axisY = 0;
 
     if (horizontalRotation > lastHorizontalRotation) {
-        axisX = 10;
+        axisX = 1;
     }
     else if (horizontalRotation < lastHorizontalRotation) {
-        axisX = -10;
+        axisX = -1;
     }
 
     if (verticalRotation > lastVerticalRotation) {
-        axisY = 10;
+        axisY = 1;
     }
     else if (verticalRotation < lastVerticalRotation) {
-        axisY = -10;
+        axisY = -1;
     }
 
     lastHorizontalRotation = horizontalRotation;
@@ -117,6 +119,10 @@ Draggable.create("#vertical-knob", {
     dragResistance: 0.9,
     onDrag: updateCanvasDraw,
 });
+
+
+
+
 
 
 window.addEventListener("keydown", draw);
