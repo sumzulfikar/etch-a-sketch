@@ -10,17 +10,21 @@
     --knob-border: #aaa7a7;
     --nav-button-color1: #FFFDD7;
     --nav-button-color2: #bd3f36;
-
+    font-family: "Rubik", sans-serif;
     touch-action: pinch-zoom;
 }
 
-
-/* 
 body {
-    height: 100vh;
     margin: 0;
-    padding: 2px;
-} */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 
 /* Text styles */
 h1,
@@ -45,7 +49,7 @@ footer {
 }
 
 #logo {
-    font-family: fantasy;
+
     font-size: large;
     text-align: center;
     color: var(--text-color);
@@ -68,9 +72,8 @@ footer {
 .outline {
     border-color: var(--etch-color);
     background: linear-gradient(var(--etch-color), var(--etch-color2));
-    border-width: 10px;
-    padding: 10px 20px 30px;
     border-radius: 10%;
+    border-width: 10px;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -95,11 +98,14 @@ footer {
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.10);
 }
 
-
+.column1 {
+    display: flex;
+    flex-direction: column;
+}
 
 canvas {
-    position: relative;
 
+    position: relative;
 }
 
 /* Styling the device knobs  */
@@ -162,19 +168,32 @@ canvas {
     background-color: var(--knob-border);
 }
 
-/* Media query for knobs */
-@media only screen and (min-width:1700px),
-(min-width:992px),
-(min-width:768px) {
-    /* .outiline {
-        height: 60vh;
-        width: 600px;
-    } */
+#clear {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
 
-    .container {
-        padding: 10px;
-        width: 80%;
-        height: 20%;
+#clear:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Media query for knobs */
+@media (min-width:1700px),
+(min-width:992px) {
+    body {
+        height: 100vh;
+
+    }
+
+    .outline {
+
+        padding: 10px 20px 30px;
+
     }
 
     .knob-outter {
@@ -189,9 +208,23 @@ canvas {
 
 }
 
-@media only screen and (min-width:576px),
-(min-width:428px) {
+@media (max-height:400) and (max-width:900) {
+    body {
+        height: 10vh;
 
+    }
+
+
+}
+
+@media (min-width:576px),
+(min-width:768px) {
+    .outline {
+        padding: 7px 12px 11px;
+
+
+
+    }
 
     .knob-outter {
         width: 100px;
@@ -205,10 +238,18 @@ canvas {
 
 }
 
-@media only screen and (min-width:80px) {
+@media (min-width:80px) {
+    .outline {
+        padding: 7px 12px 11px;
+    }
+
     #knobs {
         padding-left: 40px;
         padding-right: 40px;
+    }
+
+    h1 {
+        display: none;
     }
 
     .knob-outter {
@@ -223,10 +264,37 @@ canvas {
 
 }
 
-@media only screen and (orientation:landscape) {
+@media(orientation:landscape) and (min-width:368) {
     #etch-device {
         height: 90vh;
-        width: 90vw;
+        width: 85vw;
+    }
+
+
+
+    h1 {
+        display: none;
+    }
+
+    footer {
+        display: block;
+    }
+}
+
+@media(orientation:landscape) and (min-width:428) {
+    #etch-device {
+        height: 19vh;
+        width: 40vw;
+    }
+
+
+
+    h1 {
+        display: none;
+    }
+
+    footer {
+        display: block;
     }
 }
 

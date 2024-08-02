@@ -13,10 +13,14 @@ This is a digital recreation of world's favourite drawing toy from the '80's, th
     - Users interact with on-screen knobs to draw using touch gestures.
     - Swipe Up/Down on the Left knob for vertical lines.
     - Swipe Left/Right on the Right knob for vertical lines.
+-Save: Don't loose your sketch. Click the save button on top to save your beautiful sketch!
+- Erase: Click erase to clear the sketch area!
+
+### Happy Sketching!
 
 ## Technolies used:
 - HTML5
 - CSS3 (SASS)
 - JavaScript ES6
-- Gasp library to enable drag
+- Gasp library to enable drag and shake!
 

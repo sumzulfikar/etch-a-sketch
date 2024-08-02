@@ -8,8 +8,8 @@ const shake = () => {
     const canvas = document.getElementById("drawing-area");
     const context = canvas.getContext("2d");
     let tween = gsap.timeline()
-        .to(device, { rotation: -10, duration: 0.2, ease: "elatic" })
-        .to(device, { rotation: 10, duration: 0.2, ease: "elastic" })
+        .to(device, { rotation: -5, duration: 0.2, ease: "elatic" })
+        .to(device, { rotation: 5, duration: 0.2, ease: "elastic" })
         .to(device, { rotation: 0, duration: 0.2, ease: "elastic" });
     const { height, width } = canvas;
 
