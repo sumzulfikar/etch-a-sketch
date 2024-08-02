@@ -14,13 +14,17 @@
     touch-action: pinch-zoom;
 }
 
-
-
 body {
-    height: 100vh;
     margin: 0;
-    padding: 2px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+
 
 /* Text styles */
 h1,
@@ -68,9 +72,8 @@ footer {
 .outline {
     border-color: var(--etch-color);
     background: linear-gradient(var(--etch-color), var(--etch-color2));
-    border-width: 10px;
-    padding: 10px 20px 30px;
     border-radius: 10%;
+    border-width: 10px;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -95,11 +98,14 @@ footer {
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.10);
 }
 
-
+.column1 {
+    display: flex;
+    flex-direction: column;
+}
 
 canvas {
-    position: relative;
 
+    position: relative;
 }
 
 /* Styling the device knobs  */
@@ -162,25 +168,32 @@ canvas {
     background-color: var(--knob-border);
 }
 
+#clear {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#clear:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Media query for knobs */
 @media (min-width:1700px),
-(min-width:992px),
-(min-width:768px) {
-    /* .outiline {
-        height: 60vh;
-        width: 600px;
-    } */
-
-    .canvas {
-        width: "1600";
-        height: "1000";
+(min-width:992px) {
+    body {
+        height: 100vh;
 
     }
 
-    .container {
-        padding: 10px;
-        width: 80%;
-        height: 20%;
+    .outline {
+
+        padding: 10px 20px 30px;
+
     }
 
     .knob-outter {
@@ -195,9 +208,23 @@ canvas {
 
 }
 
-@media (min-width:576px),
-(min-width:428px) {
+@media (max-height:400) and (max-width:900) {
+    body {
+        height: 10vh;
 
+    }
+
+
+}
+
+@media (min-width:576px),
+(min-width:768px) {
+    .outline {
+        padding: 7px 12px 11px;
+
+
+
+    }
 
     .knob-outter {
         width: 100px;
@@ -212,9 +239,17 @@ canvas {
 }
 
 @media (min-width:80px) {
+    .outline {
+        padding: 7px 12px 11px;
+    }
+
     #knobs {
         padding-left: 40px;
         padding-right: 40px;
+    }
+
+    h1 {
+        display: none;
     }
 
     .knob-outter {
@@ -229,24 +264,37 @@ canvas {
 
 }
 
-@media(orientation:landscape) {
+@media(orientation:landscape) and (min-width:368) {
     #etch-device {
         height: 90vh;
-        width: 53vw;
+        width: 85vw;
     }
 
-    .canvas {
-        width: "1600";
-        height: "1000";
 
-    }
 
     h1 {
         display: none;
     }
 
     footer {
+        display: block;
+    }
+}
+
+@media(orientation:landscape) and (min-width:428) {
+    #etch-device {
+        height: 19vh;
+        width: 40vw;
+    }
+
+
+
+    h1 {
         display: none;
+    }
+
+    footer {
+        display: block;
     }
 }
 

@@ -7,6 +7,31 @@ const horizontalKnobElement = document.getElementById("horizontal-knob");
 
 
 
+// resize canvas 
+const displayCanvasResize = () => {
+    const displayRatio = window.devicePixelRatio;
+    const displayWidth = Math.round(canvas.clientWidth * displayRatio);
+    const displayHeight = Math.round(canvas.clientHeight * displayRatio);
+    const needResize = canvas.width !== displayWidth ||
+        canvas.height !== displayHeight;
+
+    if (needResize) {
+        canvas.height = displayHeight;
+        canvas.width = displayWidth;
+        context.scale(displayRatio, displayRatio);
+
+    }
+    return needResize;
+}
+
+
+displayCanvasResize();
+context.lineJoin = 'miter';
+context.lineCap = 'round';
+
+context.lineWidth = 1;
+
+
 //set height and width for movement
 
 const { height, width } = canvas;
@@ -17,13 +42,11 @@ let coordinates = {
 
 }
 
-context.beginPath();
-context.moveTo(coordinates.x, coordinates.y);
-context.stroke();
 
 
 
 const drawLine = (axisX, axisY) => {
+
     context.beginPath();
     context.moveTo(coordinates.x, coordinates.y);
     coordinates.x += axisX;
@@ -34,12 +57,12 @@ const drawLine = (axisX, axisY) => {
 }
 
 function draw(event) {
-    const movement = 10;
+    const movement = 1;
     let axisX = 0;
     let axisY = 0;
     if (event.key.includes("Arrow")) {
         event.preventDefault();
-        console.log(event.key);
+
         if (event.key === "ArrowLeft") {
             axisX -= movement;
             horizontalKnobElement.style.transform = `rotate(${coordinates.x * Math.PI / 180}rad)`;
@@ -91,10 +114,10 @@ const updateCanvasDraw = () => {
     }
 
     if (verticalRotation > lastVerticalRotation) {
-        axisY = 1;
+        axisY = -1;
     }
     else if (verticalRotation < lastVerticalRotation) {
-        axisY = -1;
+        axisY = 1;
     }
 
     lastHorizontalRotation = horizontalRotation;
