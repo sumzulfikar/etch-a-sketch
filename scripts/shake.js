@@ -15,7 +15,9 @@ const shake = () => {
 
     tween.play();
     context.clearRect(0, 0, height, width);
-
+    const x = Math.floor(Math.random(0));
+    const y = Math.floor(Math.random(0));
+    drawLine(x, y);
 }
 
 clearBtn.addEventListener("click", shake);

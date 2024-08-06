@@ -18,38 +18,47 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+
 }
 
 
-
-
-
 /* Text styles */
-h1,
-h2 {
+h1 {
+
     text-align: center;
     padding-top: 5px;
 }
 
-h3 {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-p {
-    text-wrap: wrap;
-}
 
 footer {
+
     padding-top: 65px;
     text-align: center;
 }
 
-#logo {
 
+
+/* Shake and Sketch device style */
+
+.container {
+    display: flex;
+    height: 80vh;
+    flex-basis: content;
+
+
+
+}
+
+#etch-device {
+    max-width: 97%;
+    display: inline;
+
+
+}
+
+#logo {
+    position: inline;
     font-size: large;
     text-align: center;
     color: var(--text-color);
@@ -57,32 +66,40 @@ footer {
     display: flex;
     justify-content: center;
 
-
 }
 
-/* Shake and Sketch device style */
-/* #etch-device {
-    max-width: 80vw;
-    max-height: 60vh;
-    display: inline;
-    align-items: center;
-
-} */
-
-.outline {
+.outline1 {
     border-color: var(--etch-color);
     background: linear-gradient(var(--etch-color), var(--etch-color2));
+    max-height: 80vh;
     border-radius: 10%;
     border-width: 10px;
+    padding: 3% 5% 10%;
+    flex-grow: 1;
     display: flex;
     position: relative;
     flex-direction: column;
+    justify-content: center;
+
+
+
+}
+
+.outline2 {
+    border-color: var(--etch-color);
+    background: linear-gradient(var(--etch-color), var(--etch-color2));
+    padding: 3% 1% 1%;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 
 }
 
 #store {
-    padding-left: 40px;
-    padding-right: 40px;
+    position: relative;
+    padding-left: 4%;
+    padding-right: 4%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,16 +109,14 @@ footer {
 #drawing-area {
 
     background-color: var(--canvas-color);
+    position: relative;
     padding-top: 2px;
     overflow: hidden;
     border-radius: 10%;
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.10);
 }
 
-.column1 {
-    display: flex;
-    flex-direction: column;
-}
+
 
 canvas {
 
@@ -114,8 +129,7 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
+
 
 }
 
@@ -135,6 +149,7 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
+
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.6);
     z-index: 9999;
     cursor: pointer
@@ -164,7 +179,9 @@ canvas {
     position: relative;
     width: 7px;
     height: 3px;
-    transform: translate(-65%, -50%);
+    top: 10%;
+    left: 51%;
+    transform: translate(-69%, -57%);
     background-color: var(--knob-border);
 }
 
@@ -182,17 +199,10 @@ canvas {
 }
 
 
-/* Media query for knobs */
-@media (min-width:1700px),
-(min-width:992px) {
+/* Media query for device */
+@media only screen and (min-width: 1200px) {
     body {
-        height: 100vh;
-
-    }
-
-    .outline {
-
-        padding: 10px 20px 30px;
+        align-items: center;
 
     }
 
@@ -200,53 +210,26 @@ canvas {
         width: 200px;
         height: 200px;
     }
-
-    .knob-inner2 {
-        top: 76px;
-        left: 19px;
-    }
-
 }
 
-@media (max-height:400) and (max-width:900) {
+
+@media only screen and (min-width:992px) {
     body {
-        height: 10vh;
+        align-items: center;
 
     }
 
-
-}
-
-@media (min-width:576px),
-(min-width:768px) {
-    .outline {
-        padding: 7px 12px 11px;
-
-
-
+    h1 {
+        display: block;
     }
 
     .knob-outter {
         width: 100px;
         height: 100px;
     }
-
-    .knob-inner2 {
-        top: 76px;
-        left: 19px;
-    }
-
 }
 
-@media (min-width:80px) {
-    .outline {
-        padding: 7px 12px 11px;
-    }
-
-    #knobs {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+@media only screen and (min-height:600px) {
 
     h1 {
         display: none;
@@ -256,47 +239,20 @@ canvas {
         width: 70px;
         height: 70px;
     }
-
-    .knob-inner2 {
-        top: 27px;
-        left: 13px;
-    }
-
 }
 
-@media(orientation:landscape) and (min-width:368) {
-    #etch-device {
-        height: 90vh;
-        width: 85vw;
-    }
-
-
+@media only screen and (orientation:landscape) and (max-height: 420px) {
 
     h1 {
         display: none;
     }
 
-    footer {
-        display: block;
+    .knob-outter {
+        width: 70px;
+        height: 70px;
     }
 }
 
-@media(orientation:landscape) and (min-width:428) {
-    #etch-device {
-        height: 19vh;
-        width: 40vw;
-    }
-
-
-
-    h1 {
-        display: none;
-    }
-
-    footer {
-        display: block;
-    }
-}
 
 /* Arrows styling for knobs */
 

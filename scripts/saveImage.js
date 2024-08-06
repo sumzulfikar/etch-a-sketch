@@ -18,5 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     image.addEventListener("click", download);
 
-    // 
+
 });
+
