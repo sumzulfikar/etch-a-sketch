@@ -241,7 +241,18 @@ canvas {
     }
 }
 
-@media only screen and (orientation:landscape) and (height<=400px) {
+@media (height<=400px) {
+    h1 {
+        display: none;
+    }
+
+    .knob-outter {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media only screen and (orientation:landscape) {
 
     h1 {
         display: none;
