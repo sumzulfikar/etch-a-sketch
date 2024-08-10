@@ -22,6 +22,11 @@ body {
 
 }
 
+body.landscape .knob-outter {
+    width: 60px;
+    height: 60px;
+}
+
 
 /* Text styles */
 h1 {
@@ -229,7 +234,7 @@ canvas {
     }
 }
 
-@media (height<=600px) {
+@media (min-height:350) and (max-height:600px) {
 
     h1 {
         display: none;
@@ -241,18 +246,28 @@ canvas {
     }
 }
 
-@media (height<=400px) {
+@media (height<=349px) {
+    #etch-device {
+        max-width: 64%;
+
+
+    }
+
     h1 {
         display: none;
     }
 
     .knob-outter {
-        width: 60px;
-        height: 60px;
+        width: 56px;
+        height: 56px;
     }
 }
 
 @media only screen and (orientation:landscape) {
+    .container {
+        height: 60%vh;
+        align-items: center;
+    }
 
     h1 {
         display: none;
