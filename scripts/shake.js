@@ -22,3 +22,6 @@ const shake = () => {
 }
 
 clearBtn.addEventListener("click", shake);
+
+
+

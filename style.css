@@ -188,7 +188,7 @@ canvas {
 #clear {
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 22% 27%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
@@ -229,7 +229,7 @@ canvas {
     }
 }
 
-@media only screen and (min-height:600px) {
+@media (height<=600px) {
 
     h1 {
         display: none;
@@ -241,18 +241,29 @@ canvas {
     }
 }
 
-@media only screen and (orientation:landscape) and (max-height: 420px) {
+@media only screen and (orientation:landscape) and (height<=400px) {
 
     h1 {
         display: none;
     }
 
     .knob-outter {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 }
 
+@media (width<=430px) {
+
+    h1 {
+        display: none;
+    }
+
+    .knob-outter {
+        width: 60px;
+        height: 60px;
+    }
+}
 
 /* Arrows styling for knobs */
 
