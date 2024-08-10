@@ -264,9 +264,11 @@ canvas {
 }
 
 @media only screen and (orientation:landscape) {
-    .container {
-        height: 60%vh;
-        align-items: center;
+
+    #etch-device {
+        max-width: 64%;
+
+
     }
 
     h1 {
