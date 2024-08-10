@@ -5,13 +5,19 @@ const context = canvas.getContext("2d");
 const verticalKnobElement = document.getElementById("vertical-knob");
 const horizontalKnobElement = document.getElementById("horizontal-knob");
 
-
+//set height and width for movement
+const { height, width } = canvas;
+// A coordinates object to store current drawing coordinates for x-axis and y-axis
+let coordinates = {
+    x: 10,
+    y: 10,
+}
 
 // resize canvas 
 const displayCanvasResize = () => {
     const displayRatio = window.devicePixelRatio;
-    const displayWidth = Math.round(canvas.clientWidth * displayRatio);
-    const displayHeight = Math.round(canvas.clientHeight * displayRatio);
+    const displayWidth = Math.round(canvas.width * displayRatio);
+    const displayHeight = Math.round(canvas.height * displayRatio);
     const needResize = canvas.width !== displayWidth ||
         canvas.height !== displayHeight;
 
@@ -26,69 +32,48 @@ const displayCanvasResize = () => {
 
 
 displayCanvasResize();
-context.lineJoin = 'miter';
-context.lineCap = 'round';
-
-context.lineWidth = 1;
 
 
-//set height and width for movement
-
-const { height, width } = canvas;
-// A coordinates object to store current drawing coordinates for x-axis and y-axis
-let coordinates = {
-    x: 10,
-    y: 10,
-
-}
-
-
-
-
-const drawLine = (axisX, axisY) => {
-
-    context.beginPath();
-    context.moveTo(coordinates.x, coordinates.y);
-    coordinates.x += axisX;
-    coordinates.y += axisY;
-    context.lineTo(coordinates.x, coordinates.y);
-    context.stroke();
-    return;
-}
+//Using keyboard arrows to drawlines
 
 function draw(event) {
     const movement = 1;
     let axisX = 0;
     let axisY = 0;
+
     if (event.key.includes("Arrow")) {
         event.preventDefault();
 
         if (event.key === "ArrowLeft") {
             axisX -= movement;
             horizontalKnobElement.style.transform = `rotate(${coordinates.x * Math.PI / 180}rad)`;
-
-
         }
+
+
         else if (event.key === "ArrowRight") {
             axisX += movement;
             horizontalKnobElement.style.transform = `rotate(${coordinates.x * Math.PI / 180}rad)`;
 
         }
+
         else if (event.key === "ArrowUp") {
             axisY -= movement;
             verticalKnobElement.style.transform = `rotate(${coordinates.y * Math.PI / 180}rad)`;
         }
+
         else if (event.key === "ArrowDown") {
             axisY += movement;
             verticalKnobElement.style.transform = `rotate(${coordinates.y * Math.PI / 180}rad)`;
         }
-
     }
+
     drawLine(axisX, axisY);
+
     return;
+
+
 }
 
-// using knob rotation to determine drawing direction
 
 //variable to track last rotation value
 let lastHorizontalRotation = 0;
@@ -97,8 +82,9 @@ let lastVerticalRotation = 0;
 const normalizeRotation = (rotation) => {
     return ((rotation % 360) + 360) % 360;
 }
-
-const updateCanvasDraw = () => {
+// using knob rotation to determine drawing direction
+const updateCanvasDraw = (event) => {
+    event.preventDefault();
     const horizontalKnob = Draggable.get("#horizontal-knob");
     const verticalKnob = Draggable.get("#vertical-knob");
     const horizontalRotation = normalizeRotation(horizontalKnob.rotation);
@@ -127,6 +113,25 @@ const updateCanvasDraw = () => {
 
 
 }
+
+
+const drawLine = (axisX, axisY) => {
+    coordinates.x = Math.max(0, Math.min(canvas.width - 1, coordinates.x + axisX));
+    coordinates.y = Math.max(0, Math.min(canvas.height - 1, coordinates.y + axisY));
+    context.lineJoin = 'miter';
+    context.lineCap = 'round';
+    context.lineWidth = 1;
+    context.beginPath();
+
+    context.moveTo(coordinates.x, coordinates.y);
+    context.lineTo(coordinates.x, coordinates.y);
+    context.stroke();
+    return;
+}
+
+
+
+
 
 Draggable.create("#horizontal-knob", {
     type: "rotation",

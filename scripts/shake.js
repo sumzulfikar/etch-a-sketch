@@ -2,7 +2,6 @@
 
 const clearBtn = document.getElementById("clear");
 const shake = () => {
-
     const device = document.getElementById("etch-device");
 
     const canvas = document.getElementById("drawing-area");
@@ -11,13 +10,15 @@ const shake = () => {
         .to(device, { rotation: -5, duration: 0.2, ease: "elatic" })
         .to(device, { rotation: 5, duration: 0.2, ease: "elastic" })
         .to(device, { rotation: 0, duration: 0.2, ease: "elastic" });
-    const { height, width } = canvas;
 
     tween.play();
-    context.clearRect(0, 0, height, width);
-    const x = Math.floor(Math.random(0));
-    const y = Math.floor(Math.random(0));
-    drawLine(x, y);
+    context.save();
+
+    context.clearRect(0, 0, canvas.height, canvas.width);
+    context.restore();
+    // const x = Math.floor(Math.random(0));
+    // const y = Math.floor(Math.random(0));
+
 }
 
 clearBtn.addEventListener("click", shake);
