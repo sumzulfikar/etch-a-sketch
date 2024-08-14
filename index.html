@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
 
     <title>Digital Shake and Sketch</title>
 </head>
@@ -19,13 +23,32 @@
     <header>
         <h1> Get Your Sketch On!</h1>
     </header>
+    <div id="tipsPopup">
+        <div id="tipContent">
+            <div><a href="" id="x"><i class="fa-sharp fa-solid fa-x"></i></a></div>
+            <div id="tip-text">
+
+                <p>Keyboard Controls:</p>
+                <p> Up/Down arrows draw horizontal.</p>
+                <p> Left/Right arrows draw vertical lines</p>
+
+                <p>Use mouse or touchscreen to move the dials.</p>
+                <p>Don't forget to save the sketch by pressing save button on top!</p>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
     <main class="container">
         <!-- Section of the etch a sketch border -->
 
         <section id="etch-device" class="column1">
             <div class="outline1">
                 <div id="store">
-                    <div><a href="" title="Tips"><i class="fas fa-info-circle" style="color: #d4af37;"></i></a></div>
+                    <div><a href="" title="Tips" id="tipsIcon"><i class="fas fa-info-circle"
+                                style="color: #d4af37;"></i></a></div>
+
                     <div>
                         <h2 id="logo">Sketch and Shake</h2>
                     </div>
@@ -72,7 +95,9 @@
 
             <footer>
 
-                Developed by Sumaiya Zulfikar
+                &copy;
+                <script>document.write(new Date().getFullYear());</script>
+                Sumaiya Zulfikar | <a href="https://sumaiyaz.co.uk/"></a><i class="fa-solid fa-globe"></i>
             </footer>
 
         </section>
@@ -91,7 +116,8 @@
     <script src="./scripts/canvasDraw.js"></script>
     <!-- Script for shaking etch and shake -->
     <script src="./scripts/shake.js"></script>
-
+    <!-- Script for  tips display -->
+    <script src="./scripts/popup.js"></script>
 
     <!-- Scripts for arrow fonts -->
     <script src="https://kit.fontawesome.com/3767531c4f.js" crossorigin="anonymous">
