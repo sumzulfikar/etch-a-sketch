@@ -37,9 +37,11 @@ h1 {
 
 
 footer {
-
-    padding-top: 65px;
+    font-family: 'Source Code Pro';
+    font-size: 78%;
+    padding-top: 10%;
     text-align: center;
+
 }
 
 
@@ -48,7 +50,6 @@ footer {
 
 .container {
     display: flex;
-    height: 80vh;
     flex-basis: content;
 
 
@@ -56,7 +57,7 @@ footer {
 }
 
 #etch-device {
-    max-width: 97%;
+    max-width: max-content;
     display: inline;
 
 
@@ -64,7 +65,7 @@ footer {
 
 #logo {
     position: inline;
-    font-size: large;
+    font-size: medium;
     text-align: center;
     color: var(--text-color);
     font-weight: 500;
@@ -203,9 +204,23 @@ canvas {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
+/* Arrows styling for knobs */
+
+#icon {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-top: 7px;
+
+}
+
+
+img {
+    height: 20px;
+}
 
 /* Media query for device */
-@media only screen and (min-width: 1200px) {
+@media (min-width:992px)and (min-width: 1200px) {
     body {
         align-items: center;
 
@@ -218,7 +233,7 @@ canvas {
 }
 
 
-@media only screen and (min-width:992px) {
+@media (min-width:601px) and (max-width:991px) {
     body {
         align-items: center;
 
@@ -233,6 +248,21 @@ canvas {
         height: 100px;
     }
 }
+
+@media (min-width:80px) and (max-width:600px) {
+
+
+    h1 {
+        display: block;
+    }
+
+    .knob-outter {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
 
 @media (min-height:350) and (max-height:600px) {
 
@@ -293,12 +323,32 @@ canvas {
     }
 }
 
-/* Arrows styling for knobs */
 
-#icon {
+/* Tips pop up message */
+#tipsPopup {
+    position: absolute;
+    transform: translate(-45%, -48%);
+    background-color: rgba(146, 167, 116, 0.9);
+    border-radius: 10px;
+
+    box-shadow:
+        0px 2px 5px rgba(0, 0, 0, 0.3);
+    top: 40%;
+    left: 35%;
+    width: 69%;
+    z-index: 10000;
+    display: none;
+
+}
+
+#tipContent {
+    padding: 2%;
+    font-size: small;
+    text-align: left;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
-    padding-top: 7px;
+}
 
+#tip-text {
+    padding: 2%;
 }
