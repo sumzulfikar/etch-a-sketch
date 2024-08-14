@@ -18,7 +18,7 @@ Click here to get your sketches on: pixelplaytime.netlify.app
 
 ### Happy Sketching!
 
-## Technolies used:
+## Technologies used:
 - HTML
 - CSS
 - JavaScript
