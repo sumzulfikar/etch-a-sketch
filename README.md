@@ -1,6 +1,6 @@
-# Digital Drawing with Etch A Sketch
+# PixelPlaytime
 This is a digital recreation of world's favourite drawing toy from the '80's, the Etch A Sketch.
-
+Click here to get your sketches on: pixelplaytime.netlify.app
 ## Features
 - Desktop Version:
     -  User's can draw sketches using either  their keyboard arrows or mouse.
@@ -14,13 +14,13 @@ This is a digital recreation of world's favourite drawing toy from the '80's, th
     - Swipe Up/Down on the Left knob for vertical lines.
     - Swipe Left/Right on the Right knob for vertical lines.
 -Save: Don't loose your sketch. Click the save button on top to save your beautiful sketch!
-- Erase: Click erase to clear the sketch area!
+- Erase: Click erase to clear and sketch again!
 
 ### Happy Sketching!
 
 ## Technolies used:
-- HTML5
-- CSS3 (SASS)
-- JavaScript ES6
+- HTML
+- CSS
+- JavaScript
 - Gasp library to enable drag and shake!
 
