@@ -118,7 +118,7 @@ const updateCanvasDraw = (event) => {
 const drawLine = (axisX, axisY) => {
     coordinates.x = Math.max(0, Math.min(canvas.width - 1, coordinates.x + axisX));
     coordinates.y = Math.max(0, Math.min(canvas.height - 1, coordinates.y + axisY));
-    context.lineJoin = 'miter';
+    context.lineJoin = 'round';
     context.lineCap = 'round';
     context.lineWidth = 1;
     context.beginPath();
