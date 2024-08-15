@@ -227,6 +227,9 @@ img {
 
     }
 
+    h1 {
+        display: block;
+    }
 
     .knob-outter {
         width: 200px;
@@ -234,8 +237,27 @@ img {
     }
 }
 
+/* 
 
-@media (min-width:601px) and (max-width:992px) and (min-height:550px) {
+@media (max-width:700px) or (min-height:1180px) {
+    body {
+        align-items: center;
+
+    }
+
+    h1 {
+        display: block;
+    }
+
+    .knob-outter {
+        width: 100px;
+        height: 100px;
+    }
+} */
+
+
+
+@media (min-width:601px) and (max-width:992px) or (min-height:500px) {
     body {
         align-items: center;
 
@@ -255,7 +277,7 @@ img {
 
 
     h1 {
-        display: block;
+        display: none;
     }
 
     .knob-outter {
