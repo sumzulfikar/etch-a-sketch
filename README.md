@@ -1,6 +1,7 @@
-# Sketching
+# XketchY
 This is a digital recreation of world's favourite drawing toy from the '80's, the Etch A Sketch.
-Click here to get your sketches on: https://pixelplaytime.netlify.app
+Click here to get Your imagination, pixelated: https://xketchy.netlify.app
+
 ## Features
 - Desktop Version:
     -  User's can draw sketches using either  their keyboard arrows or mouse.
@@ -16,7 +17,7 @@ Click here to get your sketches on: https://pixelplaytime.netlify.app
 -Save: Don't loose your sketch. Click the save button on top to save your beautiful sketch!
 - Erase: Click erase to clear and sketch again!
 
-### Happy Sketching!
+### Happy XketchY!
 
 ## Technologies used:
 - HTML
