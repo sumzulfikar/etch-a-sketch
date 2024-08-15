@@ -1,4 +1,4 @@
-# PixelPlaytime
+# Sketching
 This is a digital recreation of world's favourite drawing toy from the '80's, the Etch A Sketch.
 Click here to get your sketches on: https://pixelplaytime.netlify.app
 ## Features
