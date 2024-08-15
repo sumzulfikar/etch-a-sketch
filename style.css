@@ -65,7 +65,8 @@ footer {
 
 #logo {
     position: inline;
-    font-size: medium;
+    font-family:"Rubik Maze",system-ui;
+    font-style:normal;
     text-align: center;
     color: var(--text-color);
     font-weight: 500;
