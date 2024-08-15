@@ -65,8 +65,8 @@ footer {
 
 #logo {
     position: inline;
-    font-family:"Rubik Maze",system-ui;
-    font-style:normal;
+    font-family: "Rubik Maze", system-ui;
+    font-style: normal;
     text-align: center;
     color: var(--text-color);
     font-weight: 500;
@@ -221,11 +221,12 @@ img {
 }
 
 /* Media query for device */
-@media (min-width:992px)and (min-width: 1200px) {
+@media (min-width:992px)and (max-width: 1200px) and (min-height:600px) {
     body {
         align-items: center;
 
     }
+
 
     .knob-outter {
         width: 200px;
@@ -234,7 +235,7 @@ img {
 }
 
 
-@media (min-width:601px) and (max-width:991px) {
+@media (min-width:601px) and (max-width:992px) and (min-height:550px) {
     body {
         align-items: center;
 
