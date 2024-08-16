@@ -33,6 +33,7 @@ h1 {
 
     text-align: center;
     padding-top: 5px;
+    display: block;
 }
 
 
@@ -220,133 +221,6 @@ img {
     height: 20px;
 }
 
-/* Media query for device */
-@media (min-width:992px)and (max-width: 1200px) and (min-height:600px) {
-    body {
-        align-items: center;
-
-    }
-
-    h1 {
-        display: block;
-    }
-
-    .knob-outter {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-/* 
-
-@media (max-width:700px) or (min-height:1180px) {
-    body {
-        align-items: center;
-
-    }
-
-    h1 {
-        display: block;
-    }
-
-    .knob-outter {
-        width: 100px;
-        height: 100px;
-    }
-} */
-
-
-
-@media (min-width:601px) and (max-width:992px) or (min-height:500px) {
-    body {
-        align-items: center;
-
-    }
-
-    h1 {
-        display: block;
-    }
-
-    .knob-outter {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (min-width:80px) and (max-width:600px) {
-
-
-    h1 {
-        display: none;
-    }
-
-    .knob-outter {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-
-
-@media (min-height:350) and (max-height:600px) {
-
-    h1 {
-        display: none;
-    }
-
-    .knob-outter {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-@media (height<=349px) {
-    #etch-device {
-        max-width: 64%;
-
-
-    }
-
-    h1 {
-        display: none;
-    }
-
-    .knob-outter {
-        width: 56px;
-        height: 56px;
-    }
-}
-
-@media only screen and (orientation:landscape) {
-
-    #etch-device {
-        max-width: 64%;
-
-
-    }
-
-    h1 {
-        display: none;
-    }
-
-    .knob-outter {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (width<=430px) {
-
-    h1 {
-        display: none;
-    }
-
-    .knob-outter {
-        width: 60px;
-        height: 60px;
-    }
-}
-
 
 /* Tips pop up message */
 #tipsPopup {
@@ -375,4 +249,71 @@ img {
 
 #tip-text {
     padding: 2%;
+}
+
+/* Media queries */
+
+/*  Desktop and Laptop */
+
+@media (min-width:1024px) and (max-width:5120px) and (min-height:1366px)and (max-height:2880px) {
+    body {
+        align-items: center;
+    }
+
+    h1 {
+        display: block;
+    }
+
+    .knob-outter {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Tablet */
+/* @media (min-width:) and (max-width:) or (min-height:) and (max-height:) */
+
+@media (min-width:600px) and (max-width:1023px) and (min-height:600px) and (max-height:1400px) {
+    body {
+        align-items: center;
+    }
+
+    h1 {
+        display: block;
+    }
+
+    .knob-outter {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Mobile */
+@media (min-width: 10px) and (max-width:599px) and (min-height:500px) and (max-height:1000px) {
+    h1 {
+        display: none;
+    }
+
+    .knob-outter {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Landscape */
+@media only screen and (orientation:landscape) {
+
+    #etch-device {
+        max-width: 64%;
+
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .knob-outter {
+        width: 60px;
+        height: 60px;
+    }
 }
