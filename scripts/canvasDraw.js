@@ -4,7 +4,7 @@ const canvas = document.getElementById("drawing-area");
 const context = canvas.getContext("2d");
 const verticalKnobElement = document.getElementById("vertical-knob");
 const horizontalKnobElement = document.getElementById("horizontal-knob");
-const displayRatio = window.devicePixelRatio;
+
 //set height and width for movement
 const { height, width } = canvas;
 // A coordinates object to store current drawing coordinates for x-axis and y-axis
@@ -15,7 +15,7 @@ let coordinates = {
 
 // resize canvas 
 const displayCanvasResize = () => {
-
+    const displayRatio = window.devicePixelRatio;
     const displayWidth = Math.round(canvas.width * displayRatio);
     const displayHeight = Math.round(canvas.height * displayRatio);
     const needResize = canvas.width !== displayWidth ||
